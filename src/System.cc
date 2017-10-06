@@ -7,6 +7,7 @@ mcec::System::System(unsigned int num_particles, float density, float radius)
 	m_density = density;
 	m_radius = radius;
 	m_disk_displacement = std::sqrt(m_num_particles); 
+	m_initial_configuration = "quad";
 }
 
 void init_system(pybind11::module& m)
