@@ -27,7 +27,7 @@ ext_modules = [
         ['src/module.cc', 
         'src/System.cc', 
         'src/Particle.cc',
-        'src/CellList.cc'],
+        ],
         include_dirs=[
             # Path to pybind11 headers
             get_pybind_include(),

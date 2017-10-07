@@ -12,9 +12,19 @@ t.setDensity(20.32)
 print(t.getDensity())
 
 
-t2 = mcec.System(num_particles=10, density=5.0, radius=2)
+t2 = mcec.System(num_particles=8**2, density=5.0, radius=2)
 
-assert(t2.getParticleRadius() == 2)
+a = t2.getParticleList()
+
+print (a)
+
+t2.init()
+a = t2.getParticleList()
+
+print (a)
+
+
+
 
 
 print(t)

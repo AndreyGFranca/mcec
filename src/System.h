@@ -1,6 +1,10 @@
 #pragma once
+#include <pybind11/eigen.h>
 #include <pybind11/pybind11.h>
 #include <string>
+#include <vector>
+
+#include "Particle.h"
 
 namespace py = pybind11;
 
@@ -17,6 +21,9 @@ namespace mcec
     	void setDensity(float density) { m_density = density; }
 		float getDensity() const { return m_density; }
 		float getParticleRadius() const { return m_radius; }
+		Eigen::MatrixXd getParticleList() { return m_particle_positions; }
+
+		void init();
 
 
 	private:
@@ -24,7 +31,10 @@ namespace mcec
 		float m_density;
 		float m_radius;
 		float m_disk_displacement;
+		float m_delxy;
+		float m_two_delxy;
 		std::string m_initial_configuration;
+		Eigen::MatrixXd m_particle_positions;
 
 	};
 
