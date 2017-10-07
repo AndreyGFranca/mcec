@@ -19,12 +19,12 @@ a = t2.getParticleList()
 print (a)
 
 t2.init()
-a = t2.getParticleList()
+assert (t2.getParticleList() != [])
 
-print (a)
+#print (a)
+
+t3 = mcec.System(32**2, 5.0, 2)
+assert ( t3.init() != [] )
 
 
-
-
-
-print(t)
+t2.run(100)
