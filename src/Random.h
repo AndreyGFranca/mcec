@@ -32,7 +32,6 @@ namespace mcec
             m_generator.seed(seed);
         }
 
-
         int16_t randBool();
         float random();
 
@@ -45,10 +44,7 @@ namespace mcec
         std::random_device rd;
         static Random* m_instance;
         int64_t m_seed;
-        std::mt19937 m_generator;
-
-
-        
+        std::mt19937 m_generator;        
     };
 
 }

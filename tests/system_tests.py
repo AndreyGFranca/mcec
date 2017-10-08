@@ -27,4 +27,4 @@ t3 = mcec.System(32**2, 5.0, 2)
 assert ( t3.init() != [] )
 
 
-t2.run(100)
+t2.run(10)

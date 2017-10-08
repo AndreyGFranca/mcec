@@ -27,7 +27,8 @@ ext_modules = [
         ['src/module.cc', 
         'src/System.cc', 
         'src/Particle.cc',
-        'src/EventChain.cc'
+        'src/EventChain.cc',
+        'src/Random.cc'
         ],
         include_dirs=[
             # Path to pybind11 headers

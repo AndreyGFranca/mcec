@@ -18,12 +18,12 @@ namespace mcec
         EventChain();
         ~EventChain();
 
-        void evolveSystem(std::vector<mcec::Particle*>& particles, unsigned int steps);
-        float checkCollisionOfParticles(mcec::Particle p1, mcec::Particle p2);
+        void evolveSystem(std::vector<mcec::Particle*>& particles, const unsigned int steps);
+        float event(mcec::Particle* p1, mcec::Particle* p2, int dirc);
 
     private:
         int seed;
-        boost::random::mt19937 m_gen{static_cast<std::uint32_t>(1)};
+        
     };
 
 }
