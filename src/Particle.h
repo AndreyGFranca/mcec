@@ -16,6 +16,11 @@ namespace mcec
 		float getCoordY() const { return m_y; }
 		void setCoordX(float x) { m_x = x; }
 		void setCoordY(float y) { m_y = y; }
+
+		bool operator == (const Particle& rhs)
+		{
+			return ( m_x == rhs.getCoordX() && m_y == rhs.getCoordY() );
+		}
 		// ~Particle();
 
 	private:

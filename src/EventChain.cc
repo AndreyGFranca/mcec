@@ -8,7 +8,7 @@ void mcec::EventChain::evolveSystem(std::vector<mcec::Particle*>& particles, con
 {
 	py::print("Running: ", steps);
 
-    int disk_displacement = 10;
+    float disk_displacement = 5*particles.at(0)->getRadius();
 
 
     for (size_t i = 0; i < steps; ++i)
@@ -27,17 +27,23 @@ void mcec::EventChain::evolveSystem(std::vector<mcec::Particle*>& particles, con
             Particle* cpy_particle = next_particle;
             float min_particle_distance = distance_to_go;
 
-            for (auto p : particles)
+            for (const auto& p : particles)
             {
-                float event_b = event(p, cpy_particle, dirc);
-                if (event_b < min_particle_distance)
+                if(!(p == cpy_particle))
                 {
-                    next_particle = p;
-                    min_particle_distance = event_b;
+                    float event_b = event(cpy_particle, p, dirc);
+                    if (event_b < min_particle_distance)
+                    {
+                        next_particle = p;
+                        min_particle_distance = event_b;
+                    }
                 }
             }
-            if (dirc == 1) next_particle->setCoordX(fmod((next_particle->getCoordX() + min_particle_distance), 1.0));
-            else next_particle->setCoordY(fmod((next_particle->getCoordY() + min_particle_distance), 1.0));
+            if (dirc == 1)
+                cpy_particle->setCoordX(fmod((cpy_particle->getCoordX() + min_particle_distance), 1.0));
+            else 
+                cpy_particle->setCoordY(fmod((cpy_particle->getCoordY() + min_particle_distance), 1.0));
+
             distance_to_go -= min_particle_distance;
         }
 
@@ -50,24 +56,24 @@ float mcec::EventChain::event(mcec::Particle* p1, mcec::Particle* p2, int dirc)
     float d_para = 0.0;
 
     if (dirc == 1)
-        d_perp = std::fmod(fabs(p1->getCoordY() - p2->getCoordY()), 1.0);
+        d_perp = std::fmod(fabs(p2->getCoordY() - p1->getCoordY()), 1.0);
     else
-        d_perp = std::fmod(fabs(p1->getCoordX() - p2->getCoordX()), 1.0);
+        d_perp = std::fmod(fabs(p2->getCoordX() - p1->getCoordX()), 1.0);
 
     d_perp = fmin(d_perp, 1.0 - d_perp);
     if (d_perp > 2.0 * p1->getRadius())
         return INFINITY;
     else
     {
-        d_para = sqrt(fabs(4.0 * std::pow(p1->getRadius(), 2) - std::pow(d_perp, 2)));
+        d_para = sqrt(fabs(4.0 * p1->getRadius()*p1->getRadius() - d_perp*d_perp));
 
         if (dirc == 1)
         {
-            return std::fmod((p1->getCoordX() - p2->getCoordX() - d_para + 1.0), 1.0);
+            return std::fmod((p2->getCoordX() - p1->getCoordX() - d_para + 1.0), 1.0);
         }
         else
         {
-            return std::fmod((p1->getCoordY() - p2->getCoordY() - d_para + 1.0), 1.0);
+            return std::fmod((p2->getCoordY() - p1->getCoordY() - d_para + 1.0), 1.0);
         }
     }
 }

@@ -16,9 +16,17 @@ void init_particle(py::module& m)
 		.def("getRadius", &mcec::Particle::getRadius)
 		.def_property("x", &mcec::Particle::getCoordX, &mcec::Particle::setCoordX)
 		.def_property("y", &mcec::Particle::getCoordY, &mcec::Particle::setCoordY)
+        .def("__getitem__", [](const mcec::Particle &p) {
+                return std::pair<float, float> (p.getCoordX(), p.getCoordY());
+            })
+        .def("__str__",
+            [](const mcec::Particle &p) {
+                return "(" + std::to_string(p.getCoordX()) + ", " + std::to_string(p.getCoordY())+ ")";
+            }
+        )
         .def("__repr__",
-        [](const mcec::Particle &p) {
-            return "(" + std::to_string(p.getCoordX()) + ", " + std::to_string(p.getCoordY())+ ")";
-        }
+            [](const mcec::Particle &p) {
+                return "(" + std::to_string(p.getCoordX()) + ", " + std::to_string(p.getCoordY())+ ")";
+            }
         );
 }
