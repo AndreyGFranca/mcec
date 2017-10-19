@@ -388,10 +388,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/main.cpp",
+			"file": "src/Particle.h",
 			"settings":
 			{
-				"buffer_size": 571,
+				"buffer_size": 612,
 				"line_ending": "Unix"
 			}
 		}
@@ -492,12 +492,13 @@
 	},
 	"expanded_folders":
 	[
-		"/home/andrey/dev/st_cpp/boost_python/mcec",
-		"/home/andrey/dev/st_cpp/boost_python/mcec/src",
-		"/home/andrey/dev/st_cpp/boost_python/mcec/tests"
+		"/home/andrey/Documents/dev/mcec",
+		"/home/andrey/Documents/dev/mcec/src",
+		"/home/andrey/Documents/dev/mcec/tests"
 	],
 	"file_history":
 	[
+		"/home/andrey/Documents/dev/mcec/src/main.cpp",
 		"/home/andrey/doc/search/PIBIC/mcec/tests/test.py",
 		"/home/andrey/dev/st_cpp/boost_python/mcec/src/main.cpp",
 		"/home/andrey/dev/st_cpp/boost_python/mcec/setup.py",
@@ -624,12 +625,11 @@
 		"/home/andrey/dev/st_laravel/sindicato/resources/views/painel/usuarios/adcionar.blade.php",
 		"/home/andrey/dev/st_laravel/sindicato/app/Http/Controllers/Painel/Usuarios/UsuariosController.php",
 		"/home/andrey/dev/st_laravel/sindicato/resources/views/painel/usuarios/editar.blade.php",
-		"/home/andrey/downloads/mouse_brain_1 (1).graphml",
-		"/home/andrey/dev/st_laravel/sindicato/database/seeds/BancosTableSeeder.php"
+		"/home/andrey/downloads/mouse_brain_1 (1).graphml"
 	],
 	"find":
 	{
-		"height": 48.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -788,24 +788,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/main.cpp",
-					"semi_transient": false,
+					"file": "src/Particle.h",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 571,
+						"buffer_size": 612,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								264,
-								264
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -819,7 +820,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -860,7 +861,7 @@
 	"project": "mcec.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1414,7 +1415,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 334.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
