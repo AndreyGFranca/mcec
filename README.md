@@ -2,7 +2,7 @@
 This method is used for the time evolution. It is called Event Chain Monte Carlo (ECMC) method and was developed from the Markov Chain Monte Carlo aiming at faster speed and better performance. In this method many disks are moved in each iteration and the total distance dislocated by all disks is the parameter `D`. For better performance, the directions of movement are `+x` and `+y`.
 
 
-![alt text](/figures/fig2.gif "fig2.png")
+![alt text](/figures/fig2.png "fig2.png")
 
 ## Installation
 First clone this repository
