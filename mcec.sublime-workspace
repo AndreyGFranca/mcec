@@ -394,6 +394,15 @@
 				"buffer_size": 612,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/andrey/Documents/search/PIBIC/Junho 2017/MCCE_Simulation/main.cpp",
+			"settings":
+			{
+				"buffer_size": 22706,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -629,7 +638,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -643,6 +652,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fprintf",
 			"name",
 			"road",
 			"roads",
@@ -783,7 +793,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -810,6 +820,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/andrey/Documents/search/PIBIC/Junho 2017/MCCE_Simulation/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4753,
+								4753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1714.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
